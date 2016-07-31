@@ -8,10 +8,19 @@ protocol ContiguousEnumeration: Strideable {
 
 }
 
-extension ContiguousEnumeration where Self: RawRepresentable, Self.RawValue == Stride, Self.RawValue: SignedIntegerType {
+extension ContiguousEnumeration where Self: RawRepresentable, Self.RawValue == Stride, Self.RawValue.Distance == Self.RawValue, Self.RawValue: IntegerType {
 
   func advancedBy(n: Self.Stride) -> Self? {
     return Self(rawValue: self.rawValue + n)
+  }
+
+  func advancedBy(n: Self.Stride) -> Self {
+    guard let value = self.advancedBy(n) else { fatalError("Attempted to advance past enumeration bounds.") }
+    return value
+  }
+
+  func distanceTo(other: Self) -> Self.Stride {
+    return rawValue.distanceTo(other.rawValue)
   }
 
 }
