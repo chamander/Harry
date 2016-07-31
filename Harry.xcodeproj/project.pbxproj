@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		824650F01D4DA7E400EC559D /* Harry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 824650E61D4DA7E400EC559D /* Harry.framework */; };
-		824650F51D4DA7E400EC559D /* HarryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 824650F41D4DA7E400EC559D /* HarryTests.swift */; };
-		824650F71D4DA7E400EC559D /* Harry.h in Headers */ = {isa = PBXBuildFile; fileRef = 824650E91D4DA7E400EC559D /* Harry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		824651071D4DB8ED00EC559D /* Harry.h in Headers */ = {isa = PBXBuildFile; fileRef = 824651021D4DB8ED00EC559D /* Harry.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		824651081D4DB8ED00EC559D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 824651031D4DB8ED00EC559D /* Info.plist */; };
+		824651091D4DB8ED00EC559D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 824651061D4DB8ED00EC559D /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +25,10 @@
 
 /* Begin PBXFileReference section */
 		824650E61D4DA7E400EC559D /* Harry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Harry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		824650E91D4DA7E400EC559D /* Harry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Harry.h; sourceTree = "<group>"; };
-		824650EA1D4DA7E400EC559D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		824650EF1D4DA7E400EC559D /* HarryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HarryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		824650F41D4DA7E400EC559D /* HarryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HarryTests.swift; sourceTree = "<group>"; };
-		824650F61D4DA7E400EC559D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824651021D4DB8ED00EC559D /* Harry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harry.h; sourceTree = "<group>"; };
+		824651031D4DB8ED00EC559D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		824651061D4DB8ED00EC559D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +53,8 @@
 		824650DC1D4DA7E400EC559D = {
 			isa = PBXGroup;
 			children = (
-				824650E81D4DA7E400EC559D /* Harry */,
-				824650F31D4DA7E400EC559D /* HarryTests */,
+				824651001D4DB8ED00EC559D /* Source */,
+				824651041D4DB8ED00EC559D /* Tests */,
 				824650E71D4DA7E400EC559D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,22 +68,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		824650E81D4DA7E400EC559D /* Harry */ = {
+		824651001D4DB8ED00EC559D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				824650E91D4DA7E400EC559D /* Harry.h */,
-				824650EA1D4DA7E400EC559D /* Info.plist */,
+				824651011D4DB8ED00EC559D /* Supporting Files */,
 			);
-			path = Harry;
+			path = Source;
 			sourceTree = "<group>";
 		};
-		824650F31D4DA7E400EC559D /* HarryTests */ = {
+		824651011D4DB8ED00EC559D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				824650F41D4DA7E400EC559D /* HarryTests.swift */,
-				824650F61D4DA7E400EC559D /* Info.plist */,
+				824651021D4DB8ED00EC559D /* Harry.h */,
+				824651031D4DB8ED00EC559D /* Info.plist */,
 			);
-			path = HarryTests;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		824651041D4DB8ED00EC559D /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				824651051D4DB8ED00EC559D /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		824651051D4DB8ED00EC559D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				824651061D4DB8ED00EC559D /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +108,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824650F71D4DA7E400EC559D /* Harry.h in Headers */,
+				824651071D4DB8ED00EC559D /* Harry.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +198,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				824651091D4DB8ED00EC559D /* Info.plist in Resources */,
+				824651081D4DB8ED00EC559D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				824650F51D4DA7E400EC559D /* HarryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +340,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Harry/Info.plist;
+				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.g.ackt.Harry;
@@ -341,7 +357,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Harry/Info.plist;
+				INFOPLIST_FILE = "Source/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.g.ackt.Harry;
@@ -354,7 +370,7 @@
 		824650FE1D4DA7E400EC559D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = HarryTests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.g.ackt.HarryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -365,7 +381,7 @@
 		824650FF1D4DA7E400EC559D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = HarryTests/Info.plist;
+				INFOPLIST_FILE = "Tests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.g.ackt.HarryTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
