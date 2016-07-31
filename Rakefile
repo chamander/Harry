@@ -7,10 +7,10 @@ end
 
 namespace :carthage do
 
-	desc "Update dependencies, if required"
-	task :update do
-  	system exec "carthage update --platform iphoneos --no-use-binaries --toolchain com.apple.dt.toolchain.Swift_2_3"
-	end
+  desc "Update dependencies, if required"
+  task :update do
+    system exec "carthage update --platform iphoneos --no-use-binaries --toolchain com.apple.dt.toolchain.Swift_2_3"
+  end
 
   desc "Check build for Carthage"
   task :build do
