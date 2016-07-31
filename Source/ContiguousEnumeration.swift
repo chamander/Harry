@@ -39,6 +39,10 @@ extension ContiguousEnumeration {
     return cases
   }
 
+  static var count: Int {
+    return cases.count
+  }
+
 }
 
 import Foundation

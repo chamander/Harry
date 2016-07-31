@@ -11,6 +11,13 @@ final class ContiguousEnumerationSpec: QuickSpec {
     case Daniel
 
     static let base: RollCall = Brian
+
+    static let staticCases: Array<RollCall> = [
+      .Brian,
+      .Nur,
+      .Gavan,
+      .Daniel,
+    ]
   }
 
   override func spec() {
@@ -19,14 +26,19 @@ final class ContiguousEnumerationSpec: QuickSpec {
 
       it("is able to provide a sequence of all of its unique cases") {
 
-        let expected: Array<RollCall> = [
-          .Brian,
-          .Nur,
-          .Gavan,
-          .Daniel,
-        ]
+        let expected: Array<RollCall> = RollCall.staticCases
 
         let actual: Array<RollCall> = RollCall.cases
+
+        expect(actual).to(equal(expected))
+
+      }
+
+      it("is able to provide a count of its unique cases") {
+
+        let expected: Int = RollCall.staticCases.count
+
+        let actual: Int = RollCall.count
 
         expect(actual).to(equal(expected))
 
