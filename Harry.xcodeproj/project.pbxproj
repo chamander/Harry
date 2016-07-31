@@ -15,6 +15,7 @@
 		8246511C1D4DBF9D00EC559D /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8246510C1D4DBE0000EC559D /* Nimble.framework */; };
 		8246511D1D4DBF9D00EC559D /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8246510E1D4DBE0000EC559D /* Quick.framework */; };
 		82C1F8E41D4DC759006A7185 /* ContiguousEnumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1F8E31D4DC759006A7185 /* ContiguousEnumeration.swift */; };
+		82C1F8E71D4DD50D006A7185 /* ContiguousEnumerationSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C1F8E51D4DC77E006A7185 /* ContiguousEnumerationSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		8246510F1D4DBE0000EC559D /* Quick.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = Quick.framework.dSYM; path = Carthage/Build/iOS/Quick.framework.dSYM; sourceTree = "<group>"; };
 		824651191D4DBF6C00EC559D /* TechSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechSpec.swift; sourceTree = "<group>"; };
 		82C1F8E31D4DC759006A7185 /* ContiguousEnumeration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContiguousEnumeration.swift; sourceTree = "<group>"; };
+		82C1F8E51D4DC77E006A7185 /* ContiguousEnumerationSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContiguousEnumerationSpec.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		824651041D4DB8ED00EC559D /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				82C1F8E51D4DC77E006A7185 /* ContiguousEnumerationSpec.swift */,
 				824651191D4DBF6C00EC559D /* TechSpec.swift */,
 				824651051D4DB8ED00EC559D /* Supporting Files */,
 			);
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82C1F8E71D4DD50D006A7185 /* ContiguousEnumerationSpec.swift in Sources */,
 				8246511B1D4DBF7100EC559D /* TechSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +492,7 @@
 				824650FC1D4DA7E400EC559D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		824650FD1D4DA7E400EC559D /* Build configuration list for PBXNativeTarget "HarryTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +501,7 @@
 				824650FF1D4DA7E400EC559D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
