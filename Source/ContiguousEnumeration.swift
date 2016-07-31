@@ -19,11 +19,6 @@ public extension ContiguousEnumeration where
     return Self(rawValue: self.rawValue + n)
   }
 
-  func advancedBy(n: Self.Stride) -> Self {
-    guard let value = self.advancedBy(n) else { fatalError("Attempted to advance past enumeration bounds.") }
-    return value
-  }
-
   func distanceTo(other: Self) -> Self.Stride {
     return rawValue.distanceTo(other.rawValue)
   }
@@ -31,6 +26,11 @@ public extension ContiguousEnumeration where
 }
 
 public extension ContiguousEnumeration {
+
+  func advancedBy(n: Self.Stride) -> Self {
+    guard let value = self.advancedBy(n) else { fatalError("Attempted to advance past enumeration bounds.") }
+    return value
+  }
 
   static var cases: Array<Self> {
     var current: Self       = Self.base
