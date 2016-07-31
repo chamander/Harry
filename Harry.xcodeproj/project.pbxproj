@@ -123,6 +123,7 @@
 				824650E21D4DA7E400EC559D /* Frameworks */,
 				824650E31D4DA7E400EC559D /* Headers */,
 				824650E41D4DA7E400EC559D /* Resources */,
+				8246510A1D4DBB4D00EC559D /* Lint Source */,
 			);
 			buildRules = (
 			);
@@ -211,6 +212,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8246510A1D4DBB4D00EC559D /* Lint Source */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Lint Source";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/bin/env rake swiftlint";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		824650E11D4DA7E400EC559D /* Sources */ = {
