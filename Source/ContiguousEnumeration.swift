@@ -27,7 +27,7 @@ extension ContiguousEnumeration where Self: RawRepresentable, Self.RawValue == S
 
 extension ContiguousEnumeration {
 
-  var cases: Array<Self> {
+  static var cases: Array<Self> {
     var current: Self       = Self.base
     var cases: Array<Self>  = [current]
 
