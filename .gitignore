@@ -1,0 +1,18 @@
+# Xcode
+Carthage/Build
+xcuserdata/
+
+# OS X Misc.
+.DS_Store
+
+# Vim
+*.swp
+
+# Diffs
+*.orig
+
+# Builds
+DerivedData
+*.log
+environment.xcconfig
+
