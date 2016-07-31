@@ -14,7 +14,7 @@ namespace :carthage do
 
   desc "Check build for Carthage"
   task :build do
-    system exec "carthage build --no-skip-current --platform iphoneos"
+    system exec "carthage build --no-skip-current --platform iphoneos --toolchain com.apple.dt.toolchain.Swift_2_3"
   end
 
 end
