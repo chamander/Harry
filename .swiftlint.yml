@@ -5,3 +5,11 @@ excluded:
   - Carthage
 opt_in_rules:
   - empty_count
+variable_name:
+  min_length:
+    warning: 0
+  max_length:
+    warning: 60
+line_length:
+  warning: 135
+  error: 135
