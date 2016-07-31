@@ -1,6 +1,6 @@
 // Copyright © 2016 Gavan Chan. All rights reserved.
 
-protocol ContiguousEnumeration: Strideable {
+public protocol ContiguousEnumeration: Strideable {
 
   static var base: Self { get }
 
@@ -8,7 +8,12 @@ protocol ContiguousEnumeration: Strideable {
 
 }
 
-extension ContiguousEnumeration where Self: RawRepresentable, Self.RawValue == Stride, Self.RawValue.Distance == Self.RawValue, Self.RawValue: IntegerType {
+public extension ContiguousEnumeration where
+  Self: RawRepresentable,
+  Self.RawValue == Stride,
+  Self.RawValue.Distance == Self.RawValue,
+  Self.RawValue: IntegerType
+{
 
   func advancedBy(n: Self.Stride) -> Self? {
     return Self(rawValue: self.rawValue + n)
@@ -25,7 +30,7 @@ extension ContiguousEnumeration where Self: RawRepresentable, Self.RawValue == S
 
 }
 
-extension ContiguousEnumeration {
+public extension ContiguousEnumeration {
 
   static var cases: Array<Self> {
     var current: Self       = Self.base
