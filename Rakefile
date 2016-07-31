@@ -18,3 +18,20 @@ namespace :carthage do
   end
 
 end
+
+namespace :test do
+
+  def pretty(cmd)
+    if system("which -s xcpretty")
+      sh("/bin/sh", "-o", "pipefail", "-c", "env NSUnbufferedIO=YES #{cmd} | xcpretty")
+    else
+      sh(cmd)
+    end
+  end
+
+  desc "Run iOS tests"
+  task :ios do
+    pretty "xcodebuild test -scheme Harry -destination 'platform=iOS Simulator,name=iPhone 6s'"
+  end
+
+end
