@@ -28,42 +28,6 @@ public protocol ContiguousEnumeration: Strideable {
 }
 
 // MARK:
-// MARK: Extension - Contiguous Enumeration + Raw Representable - Integer
-
-// Default implementation for values backed by raw types.
-
-public extension ContiguousEnumeration where
-  Self: RawRepresentable,
-  Self.RawValue == Stride,
-  Self.RawValue.Distance == Self.RawValue,
-  Self.RawValue: IntegerType
-{
-
-  func advancedBy(n: Self.Stride) -> Self? {
-    return Self(rawValue: rawValue + n)
-  }
-
-  func distanceTo(other: Self) -> Self.Stride {
-    return rawValue.distanceTo(other.rawValue)
-  }
-
-}
-
-// MARK:
-// MARK: Extension - Contiguous Enumeration + Strideable
-
-// Functions defined in the `Strideable` protocol.
-
-public extension ContiguousEnumeration {
-
-  func advancedBy(n: Self.Stride) -> Self {
-    guard let value = advancedBy(n) else { fatalError("Attempted to advance past enumeration bounds.") }
-    return value
-  }
-
-}
-
-// MARK:
 // MARK: Extension - Contiguous Enumeration + Convenience
 
 // Functionality that is made available on conforming types.
@@ -87,6 +51,42 @@ public extension ContiguousEnumeration {
   /// The number of case values on this type.
   static var count: Int {
     return cases.count
+  }
+  
+}
+
+// MARK:
+// MARK: Extension - Contiguous Enumeration + Strideable
+
+// Functions defined in the `Strideable` protocol.
+
+public extension ContiguousEnumeration {
+
+  func advancedBy(n: Self.Stride) -> Self {
+    guard let value = advancedBy(n) else { fatalError("Attempted to advance past enumeration bounds.") }
+    return value
+  }
+  
+}
+
+// MARK:
+// MARK: Extension - Contiguous Enumeration + Raw Representable - Integer
+
+// Default implementation for values backed by raw types.
+
+public extension ContiguousEnumeration where
+  Self: RawRepresentable,
+  Self.RawValue == Stride,
+  Self.RawValue.Distance == Self.RawValue,
+  Self.RawValue: IntegerType
+{
+
+  func advancedBy(n: Self.Stride) -> Self? {
+    return Self(rawValue: rawValue + n)
+  }
+
+  func distanceTo(other: Self) -> Self.Stride {
+    return rawValue.distanceTo(other.rawValue)
   }
 
 }
